@@ -8,16 +8,16 @@ env:
 
 before_install: 
   - git clone "https://${GITHUB_FANLIFE_TOKEN}@${GITHUB_FANLIFE_DOCS}"
-  - cd fanlife.github.io/
   # - git config user.name 'fanlife'
   # - git config user.email 'qianduan@fanli.com'
 
 install: 
   - npm install gitbook-cli -g
-
-script:
-  - rf -rm docs
   - gitbook build . ./docs
+script:
+  - cp -rf docs fanlife.github.io/
+  - cd fanlife.github.io/
+
   - git add .
   - git commit -m 'travis自动构建docs'
   - git push --force --quiet "https://${GITHUB_FANLIFE_TOKEN}@${GITHUB_FANLIFE_DOCS}" master:master
