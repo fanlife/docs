@@ -56,7 +56,7 @@ Dialog
 
 ### 回调传入方式有三种：
 
-1. 链式写法(推荐)
+- 链式写法(推荐)
 
 ```javascript
 Dialog
@@ -71,7 +71,7 @@ Dialog
     })
 ```
 
-2. `Dialog.open`参数传入
+- `Dialog.open`参数传入
 
 ```javascript
 Dialog
@@ -86,7 +86,7 @@ Dialog
     })
 ```
 
-3. 作为`Dialog.open`的配置项
+- 作为`Dialog.open`的配置项
 
 ```javascript
 Dialog
