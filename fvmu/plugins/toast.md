@@ -1,13 +1,13 @@
 # Toast
 
-## 基本用法
+## 基本用法
 
 ```javascript
 import { Toast } from 'fvmu'
 
 Toast.open('我是一个弹窗')
 ```
-![toast.open演示图](../demo/toast_open.gif)
+![toast.open演示图](../demo/toast.gif)
 
 ## 标准用法
 
@@ -25,8 +25,9 @@ Toast.open({
 
 ### 参数说明
 参数 | 说明 | 类型 | 可选值 | 默认值 
--|-|-|-|-
+-|-|-|:-:|:-:
 type | 弹窗类型(弹窗文字颜色不同) | string | normal/success/warning/error | normal
+content | 弹窗文案，必填 | string | - | -
 duration | 持续时间(毫秒) | number | — | 2500
 lock | 是否锁定屏幕(锁定则屏幕无法点击) | boolean | — | false
 onClose | 弹窗关闭后回调 | function | — | —

@@ -19,8 +19,8 @@ npm install gitbook -g
 ```markdown
 * [返利网前端文档](README.MD)
     * [fvmu](fvmu/README.MD)
-        * [Toast](fvmu/toast.md)
-        * [Dialog](fvmu/dialog.md)
+        * [Toast](fvmu/plugins/toast.md)
+        * [Dialog](fvmu/plugins/dialog.md)
 ```
 
 以上语法会生成三级目录，并生成4个md文件，如需添加对应目录或文件，直接修改`SUMMARY.md`即可。
