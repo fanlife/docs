@@ -25,8 +25,8 @@ Dialog
 参数 | 说明 | 类型 | 可选值 | 默认值 
 -|-|-|:-:|:-:
 type | 弹框类型 | string | alert/confirm | alert
-content | 弹框文案，必填 | string | - | -
-title | 弹框标题，不传则不显示 | string | — | -
+content | 弹框文案，必填 | string | — | —
+title | 弹框标题，不传则不显示 | string | — | —
 align | content文字对齐 | string | left/center/right | left
 contentClass | content另加的class | string | — | —
 confirmBtnText | 确定按钮文案(最多4个字) | string | — | 确定

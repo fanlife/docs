@@ -1,9 +1,9 @@
 # Summary
 
 * [返利网前端文档](README.MD)
-    * [fvmu](fvmu/README.MD)
+    * [FVMU帮助文档](fvmu/README.MD)
         * [plugins](fvmu/plugins/README.md)
-            * [Toast](fvmu/plugins/toast.md)
-            * [Dialog](fvmu/plugins/dialog.md)
+            * [Toast弹窗](fvmu/plugins/toast.md)
+            * [Dialog对话框](fvmu/plugins/dialog.md)
         * [components](fvmu/components/README.md)
 
