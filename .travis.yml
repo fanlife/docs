@@ -1,0 +1,24 @@
+sudo: false
+language: node_js
+node_js: stable
+env:
+  global:
+    - GITHUB_FANLIFE_DOCS: "github.com/fanlife/fanlife.github.io.git"
+    - secure: "B1ZCQ0DZQR/pmondfloK9TXIKkMDv/Ed5Y/IZk1pDfeQIXaA+OBiYDlXuNyRodMKkrOE1FaTrBFn2mi+Xe+aY9tKNx2gX46LleZPmGHch/ZXAscA7AI4l/hPDu34L1jJUaYgv2h0IcuCUgsT8gdQ2CI01HY3d4QQtYjUOCLovYKXWXnFRWuuxn0Q+pa4B7doDcHgcpl/Uva5TXBBDzam7WqkR26JoWmjc24j32HRaNMVrtNeTOi5WdYYoyOBJSnUbt+VFlccrDxiUIzYD4Hs/U61/+9LFDIdniioY0n2/HdrgK2KY2duRQV8HrFeoGAvE/VyHGOSAmZ+D9q41zq/8Cjna4LcstovP2V9Oa4Gv+MeIe772EvHhKYeqBTMhg/Upwml0rHC00dJxuH9/muuJTID73HK9kQdamXju84TCVUz1b6yoMZP7LHACt77+trABxJp++6aOyfvP18tUOKi34w+1ips0L9MXvoXEJOBGBUFLQb/CyhnLbSPyqIc9O3nrHVMSSK8Vm0Ouv5CYUljlDpOfMu1RQKuWJTcnD5wCzDbkI/kIhTnJlaqut+Zv7faUb7fd/AGc7SNuNaABQ+yICgeSAyP+BOBo9k9G4Zy9BMbj158dCWtp04sWSq6I0dIdZ6iUDI/Ij2FWplxUF4zRXduGv7/mHdMwBB7ZjmrqKE="
+
+before_install: 
+  - git clone "https://${GITHUB_FANLIFE_TOKEN}@${GITHUB_FANLIFE_DOCS}"
+  - cd fanlife.github.io/
+  # - git config user.name 'fanlife'
+  # - git config user.email 'qianduan@fanli.com'
+
+install: 
+  - npm install gitbook-cli -g
+
+script:
+  - rf -rm docs
+  - gitbook build . ./docs
+  - git add .
+  - git commit -m 'travis自动构建docs'
+  - git push --force --quiet "https://${GITHUB_FANLIFE_TOKEN}@${GITHUB_FANLIFE_DOCS}" master:master
+  # - git push origin HEAD:master --force
